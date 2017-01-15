@@ -93,7 +93,7 @@ function install_toolchain()
     cd $TOP_ROOT/OrangePiH5/.tmp_toolchain
     curl -C - -o ./toolchain $toolchain
     unzip $TOP_ROOT/OrangePiH5/.tmp_toolchain/toolchain
-    mkdir -p $TOP_ROOT/toolchain
+    mkdir -p $TOP_ROOT/OrangePiH5/toolchain
     mv $TOP_ROOT/OrangePiH5/.tmp_toolchain/OrangePiH5_toolchain-master $TOP_ROOT/OrangePiH5/toolchain/toolchain_tar
     rm -rf $TOP_ROOT/OrangePiH5/.tmp_toolchain
     cd -
