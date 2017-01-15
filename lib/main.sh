@@ -51,8 +51,6 @@ DISTRO=$(whiptail --title "OrangePi Build System" \
     "11"  "orangepi Win" \
     3>&1 1>&2 2>&3)
 
-exit 0
-
 if [ $OPTION = "0" ]; then
     # OrangePi H5
     if [ $DISTRO = "0" ]; then
