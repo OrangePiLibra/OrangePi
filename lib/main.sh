@@ -60,7 +60,7 @@ if [ $OPTION = "0" ]; then
         ./A64SDK_BuildEnvironment.sh
     # OrangePi H2
     elif [ $DISTRO = "1" ]; then
-        echo "H2"
+        ./H2SDK_BuildEnvironment.sh
     # OrangePi H3
     else
         ./H3SDK_BuildEnvironment.sh

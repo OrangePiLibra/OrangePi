@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 # This script is used to build OrangePi H2 environment.
 # Write by: Buddy
@@ -9,35 +8,43 @@ if [ -z $TOP_ROOT ]; then
     TOP_ROOT=`cd .. && pwd`
 fi
 
-if [ ! -d $TOP_ROOT/OrangePiH2 ]; then
-    mkdir $TOP_ROOT/OrangePiH2
-fi
-
 # Github
 kernel_GITHUB="https://github.com/OrangePiLibra/OrangePiH2_kernel.git"
-uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiH2_uboot.git"
+uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiH3_uboot.git"
 scripts_GITHUB="https://github.com/OrangePiLibra/OrangePiH2_scripts.git"
-toolchain_GITHUB="https://github.com/OrangePiLibra/OrangePiH2_toolchain.git"
 external_GITHUB="https://github.com/OrangePiLibra/OrangePiH2_external.git"
+toolchain="https://codeload.github.com/OrangePiLibra/OrangePiH3_toolchain/zip/master"
 
 # Prepare dirent
 Prepare_dirent=(
 kernel
 uboot
 scripts
-toolchain
 external
 )
 
+# Change to TOP dirent
+cd $TOP_ROOT/..
+TOP_ROOT="`pwd`"
+
+if [ ! -d $TOP_ROOT/OrangePiH2 ]; then
+    mkdir $TOP_ROOT/OrangePiH2
+fi
 # Download Source Code from Github
 function download_Code()
 {
     for dirent in ${Prepare_dirent[@]}; do
+        echo -e "\e[1;31m Download $dirent from Github \e[0m"
         if [ ! -d $TOP_ROOT/OrangePiH2/$dirent ]; then
             cd $TOP_ROOT/OrangePiH2
             GIT="${dirent}_GITHUB"
+            echo -e "\e[1;31m Github: ${!GIT} \e[0m"
             git clone --depth=1 ${!GIT}
-            mv $TOP_ROOT/OrangePiH2/OrangePiH2_${dirent} $TOP_ROOT/OrangePiH2/${dirent}
+            if [ $dirent = "uboot" ]; then
+                mv $TOP_ROOT/OrangePiH2/OrangePiH3_${dirent} $TOP_ROOT/OrangePiH2/${dirent}
+            else
+                mv $TOP_ROOT/OrangePiH2/OrangePiH2_${dirent} $TOP_ROOT/OrangePiH2/${dirent}
+            fi
         else
             cd $TOP_ROOT/OrangePiH2/${dirent}
             git pull
@@ -70,6 +77,36 @@ function dirent_check()
     done
 }
 
+function end_op()
+{
+    if [ ! -f $TOP_ROOT/OrangePiH2/build.sh ]; then
+        ln -s $TOP_ROOT/OrangePiH2/scripts/build.sh $TOP_ROOT/OrangePiH2/build.sh    
+    fi
+}
+
+function git_configure()
+{
+    export GIT_CURL_VERBOSE=1
+    export GIT_TRACE_PACKET=1
+    export GIT_TRACE=1    
+}
+
+function install_toolchain()
+{
+    mkdir -p $TOP_ROOT/OrangePiH2/.tmp_toolchain
+    cd $TOP_ROOT/OrangePiH2/.tmp_toolchain
+    curl -C - -o ./toolchain $toolchain
+    unzip $TOP_ROOT/OrangePiH2/.tmp_toolchain/toolchain
+    mkdir -p $TOP_ROOT/OrangePiH2/toolchain
+    mv $TOP_ROOT/OrangePiH2/.tmp_toolchain/OrangePiH2_toolchain-master $TOP_ROOT/OrangePiH2/toolchain/toolchain_tar
+    rm -rf $TOP_ROOT/OrangePiH2/.tmp_toolchain
+    cd -
+}
+
+git_configure
 download_Code
 dirent_check
+install_toolchain
+end_op
+
 cd $TOP_ROOT
