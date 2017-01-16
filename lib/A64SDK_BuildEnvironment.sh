@@ -8,10 +8,6 @@ if [ -z $TOP_ROOT ]; then
     TOP_ROOT=`cd .. && pwd`
 fi
 
-if [ ! -d $TOP_ROOT/OrangePiA64 ]; then
-    mkdir $TOP_ROOT/OrangePiA64
-fi
-
 # Github
 kernel_GITHUB="https://github.com/OrangePiLibra/OrangePiA64_kernel.git"
 uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiA64_uboot.git"
@@ -27,6 +23,13 @@ scripts
 external
 )
 
+# Change to TOP dirent
+cd $TOP_ROOT/..
+TOP_ROOT="`pwd`"
+
+if [ ! -d $TOP_ROOT/OrangePiA64 ]; then
+    mkdir $TOP_ROOT/OrangePiA64
+fi
 # Download Source Code from Github
 function download_Code()
 {
@@ -90,7 +93,7 @@ function install_toolchain()
     cd $TOP_ROOT/OrangePiA64/.tmp_toolchain
     curl -C - -o ./toolchain $toolchain
     unzip $TOP_ROOT/OrangePiA64/.tmp_toolchain/toolchain
-    mkdir -p $TOP_ROOT/toolchain
+    mkdir -p $TOP_ROOT/OrangePiA64/toolchain
     mv $TOP_ROOT/OrangePiA64/.tmp_toolchain/OrangePiA64_toolchain-master $TOP_ROOT/OrangePiA64/toolchain/toolchain_tar
     rm -rf $TOP_ROOT/OrangePiA64/.tmp_toolchain
     cd -
@@ -99,7 +102,7 @@ function install_toolchain()
 git_configure
 download_Code
 dirent_check
-#install_toolchain
+install_toolchain
 end_op
 
 cd $TOP_ROOT

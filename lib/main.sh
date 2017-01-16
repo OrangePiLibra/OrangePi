@@ -63,7 +63,7 @@ if [ $OPTION = "0" ]; then
         echo "H2"
     # OrangePi H3
     else
-        echo "H3"
+        ./H3SDK_BuildEnvironment.sh
     fi
 elif [ $OPTION = "1" ]; then
     echo "Download Image"
