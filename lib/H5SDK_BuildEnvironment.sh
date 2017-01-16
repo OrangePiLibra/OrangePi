@@ -8,10 +8,6 @@ if [ -z $TOP_ROOT ]; then
     TOP_ROOT=`cd .. && pwd`
 fi
 
-if [ ! -d $TOP_ROOT/OrangePiH5 ]; then
-    mkdir $TOP_ROOT/OrangePiH5
-fi
-
 # Github
 kernel_GITHUB="https://github.com/OrangePiLibra/OrangePiH5_kernel.git"
 uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiH5_uboot.git"
@@ -27,6 +23,13 @@ scripts
 external
 )
 
+# Change to TOP dirent
+cd $TOP_ROOT/..
+TOP_ROOT="`pwd`"
+
+if [ ! -d $TOP_ROOT/OrangePiH5 ]; then
+    mkdir $TOP_ROOT/OrangePiH5
+fi
 # Download Source Code from Github
 function download_Code()
 {
@@ -90,7 +93,7 @@ function install_toolchain()
     cd $TOP_ROOT/OrangePiH5/.tmp_toolchain
     curl -C - -o ./toolchain $toolchain
     unzip $TOP_ROOT/OrangePiH5/.tmp_toolchain/toolchain
-    mkdir -p $TOP_ROOT/toolchain
+    mkdir -p $TOP_ROOT/OrangePiH5/toolchain
     mv $TOP_ROOT/OrangePiH5/.tmp_toolchain/OrangePiH5_toolchain-master $TOP_ROOT/OrangePiH5/toolchain/toolchain_tar
     rm -rf $TOP_ROOT/OrangePiH5/.tmp_toolchain
     cd -
