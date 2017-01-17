@@ -60,7 +60,8 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
      ```
 ./build.sh
      ```
-#### Maintain OrangePi
+
+### Maintain OrangePi
 
   We offer different repertory to maintain OrangePi, you can also push your patch
   into OrangePi build system, more detail:
