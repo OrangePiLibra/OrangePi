@@ -48,8 +48,11 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
      will get a new dirent and change your dirent into new dirent.
 
      If you use "OrangePi PC2/Prima/Zero plus2", please change your dirent into "OrangePiH5"
+
      If you use "OrangePi Win/Win plus", please change your dirent into "OrangePiA64"
+
      If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
+
      If you use another board, please change your dirent into "OrangePiH3"
 
    2. Build owner distro OrangePi system
