@@ -40,6 +40,7 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
 ```
 ./Build_OrangePi.sh
 ```
+
      Choose correct OrangePi version that you want, and scripts will download
      source code that contain kernel, uboot and build scripts.
 
