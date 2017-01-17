@@ -22,25 +22,24 @@ Funny with your idear and build your owner Linux system.
 * OrangePi 2
 * OrangePi Plus 2
 
-### Using OrangePi Build System
+#### Using OrangePi Build System
 
    It's easy to build owner Linux distro in OrangePi Build System, you need follow
    thoese steps:
 
-   * Download source code for your OrangePi Board.
+   1. Download source code for your OrangePi Board.
 
       You need clone this repertory, and run build scripts to download
       source code for your OrangePi Board. such as:
-   ```
+      ```
 git clone https://github.com/OrangePiLibra/OrangePi.git
-   ```
+      ```
       This scripts is a simple entry that build different OrangePi distro,
       After finishing to download this repertory, you need change dirent into
       "OrangePi", and run build scripts:
-```
+      ```
 ./Build_OrangePi.sh
-```
-
+      ```
 
      Choose correct OrangePi version that you want, and scripts will download
      source code that contain kernel, uboot and build scripts.
@@ -53,15 +52,15 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
      If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
      If you use another board, please change your dirent into "OrangePiH3"
 
-   * Build owner distro OrangePi system
+   2. Build owner distro OrangePi system
 
      Then, you only need run a scripts and you can build your owner system easily.
      Note, please don't run this scripts as root. Last, you need run scripts,
      such as:
-```
+     ```
 ./build.sh
-```
-### Maintain OrangePi
+     ```
+#### Maintain OrangePi
 
   We offer different repertory to maintain OrangePi, you can also push your patch
   into OrangePi build system, more detail:
