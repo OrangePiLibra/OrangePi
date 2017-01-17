@@ -22,44 +22,48 @@ Funny with your idear and build your owner Linux system.
 * OrangePi 2
 * OrangePi Plus 2
 
-### Using OrangePi Build System
- 
-It's easy to build owner Linux distro in OrangePi Build System, you need follow
-thoese steps:
+#### Using OrangePi Build System
 
-1. Download source code for your OrangePi Board.
+   It's easy to build owner Linux distro in OrangePi Build System, you need follow
+   thoese steps:
 
-   You need clone this repertory, and run build scripts to download 
-   source code for your OrangePi Board. such as:
-   ```
+   1. Download source code for your OrangePi Board.
+
+      You need clone this repertory, and run build scripts to download
+      source code for your OrangePi Board. such as:
+      ```
 git clone https://github.com/OrangePiLibra/OrangePi.git
-   ```
-   This scripts is a simple entry that build different OrangePi distro, 
-   After finishing to download this repertory, you need change dirent into
-   "OrangePi", and run build scripts: 
-```
+      ```
+      This scripts is a simple entry that build different OrangePi distro,
+      After finishing to download this repertory, you need change dirent into
+      "OrangePi", and run build scripts:
+      ```
 ./Build_OrangePi.sh
-```
+      ```
 
-   Choose correct OrangePi version that you want, and scripts will download
-   source code that contain kernel, uboot and build scripts.
+     Choose correct OrangePi version that you want, and scripts will download
+     source code that contain kernel, uboot and build scripts.
 
-   It will cost some time, so please wait a mintue. After this finish, you 
-   will get a new dirent and change your dirent into new dirent.
+     It will cost some time, so please wait a mintue. After this finish, you
+     will get a new dirent and change your dirent into new dirent.
 
-   If you use "OrangePi PC2/Prima/Zero plus2", please change your dirent into "OrangePiH5"
-   If you use "OrangePi Win/Win plus", please change your dirent into "OrangePiA64"
-   If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
-   If you use another board, please change your dirent into "OrangePiH3"
+     If you use "OrangePi PC2/Prima/Zero plus2", please change your dirent into "OrangePiH5"
 
-2. Build owner distro OrangePi system
+     If you use "OrangePi Win/Win plus", please change your dirent into "OrangePiA64"
 
-   Then, you only need run a scripts and you can build your owner system easily.
-   Note, please don't run this scripts as root. Last, you need run scripts,
-   such as:
-```
+     If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
+
+     If you use another board, please change your dirent into "OrangePiH3"
+
+   2. Build owner distro OrangePi system
+
+     Then, you only need run a scripts and you can build your owner system easily.
+     Note, please don't run this scripts as root. Last, you need run scripts,
+     such as:
+     ```
 ./build.sh
-```
+     ```
+
 ### Maintain OrangePi
 
   We offer different repertory to maintain OrangePi, you can also push your patch
@@ -67,7 +71,7 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
 
   * OrangePi PC2/Prima/Zero plus2
 
-    OrangePi PC2/Prima/Zero plus build on Allwinner H5 Soc, the offfical maintain 
+    OrangePi PC2/Prima/Zero plus build on Allwinner H5 Soc, the offfical maintain
     repertory as follow:
 
     kernel:
@@ -82,7 +86,7 @@ https://github.com/OrangePiLibra/OrangePiH5_uboot.git
     ```
 https://github.com/OrangePiLibra/OrangePiH5_scripts.git
     ```
-    external binary file 
+    external binary file
     ```
 https://github.com/OrangePiLibra/OrangePiH5_external.git
     ```
@@ -93,7 +97,7 @@ https://github.com/OrangePiLibra/OrangePiH5_toolchain.git
 
   * OrangePi Win/Win plus
 
-    OrangePi Win/Win plus build on Allwinner A64 Soc, the offfical maintain 
+    OrangePi Win/Win plus build on Allwinner A64 Soc, the offfical maintain
     repertory as follow:
 
     kernel:
@@ -108,7 +112,7 @@ https://github.com/OrangePiLibra/OrangePiA64_uboot.git
     ```
 https://github.com/OrangePiLibra/OrangePiA64_scripts.git
     ```
-    external binary file 
+    external binary file
     ```
 https://github.com/OrangePiLibra/OrangePiA64_external.git
     ```
@@ -116,11 +120,11 @@ https://github.com/OrangePiLibra/OrangePiA64_external.git
     ```
 https://github.com/OrangePiLibra/OrangePiA64_toolchain.git
     ```
-  
+
 
   * OrangePi Zero
 
-    OrangePi Zero plus build on Allwinner H2+ Soc, the offfical maintain 
+    OrangePi Zero plus build on Allwinner H2+ Soc, the offfical maintain
     repertory as follow:
 
     kernel:
@@ -135,7 +139,7 @@ https://github.com/OrangePiLibra/OrangePiH3_uboot.git
     ```
 https://github.com/OrangePiLibra/OrangePiH2_scripts.git
     ```
-    external binary file 
+    external binary file
     ```
 https://github.com/OrangePiLibra/OrangePiH2_external.git
     ```
@@ -146,7 +150,7 @@ https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
 
   * OrangePi Plus2/Plus 2E/One/PC/2/Lite/PC Plus/Mini2
 
-    OrangePi Plus2/Plus 2E/One/PC/2/Lite/PC Plus/Mini2 plus build on Allwinner H3 Soc, 
+    OrangePi Plus2/Plus 2E/One/PC/2/Lite/PC Plus/Mini2 plus build on Allwinner H3 Soc,
     the offfical maintain repertory as follow:
 
     kernel:
@@ -161,7 +165,7 @@ https://github.com/OrangePiLibra/OrangePiH3_uboot.git
     ```
 https://github.com/OrangePiLibra/OrangePiH3_scripts.git
     ```
-    external binary file 
+    external binary file
     ```
 https://github.com/OrangePiLibra/OrangePiH3_external.git
     ```
