@@ -26,7 +26,8 @@ Funny with your idear and build your owner Linux system.
 
 It's easy to build owner Linux distro in OrangePi Build System, you need follow
 thoese steps:
-1. Download source code for your OrangePi Board.
+
+   1. Download source code for your OrangePi Board.
 
    You need clone this repertory, and run build scripts to download
    source code for your OrangePi Board. such as:
@@ -49,7 +50,8 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
    If you use "OrangePi Win/Win plus", please change your dirent into "OrangePiA64"
    If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
    If you use another board, please change your dirent into "OrangePiH3"
-2. Build owner distro OrangePi system
+   
+   2. Build owner distro OrangePi system
 
    Then, you only need run a scripts and you can build your owner system easily.
    Note, please don't run this scripts as root. Last, you need run scripts,
