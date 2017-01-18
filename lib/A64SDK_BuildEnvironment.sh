@@ -92,12 +92,7 @@ function install_toolchain()
     if [ ! -d $TOP_ROOT/OrangePiA64/toolchain/gcc-linaro-aarch ]; then
         mkdir -p $TOP_ROOT/OrangePiA64/.tmp_toolchain
         cd $TOP_ROOT/OrangePiA64/.tmp_toolchain
-        for ((i = 0; i < 100; i++)) do
-            curl -C - -o ./toolchain $toolchain
-            if [ -f $TOP_ROOT/OrangePiA64/.tmp_toolchain/toolchain ]; then
-                i=200
-            fi
-        done
+        curl -C - -o ./toolchain $toolchain
         unzip $TOP_ROOT/OrangePiA64/.tmp_toolchain/toolchain
         mkdir -p $TOP_ROOT/OrangePiA64/toolchain
         mv $TOP_ROOT/OrangePiA64/.tmp_toolchain/OrangePiA64_toolchain-master $TOP_ROOT/OrangePiA64/toolchain/toolchain_tar
