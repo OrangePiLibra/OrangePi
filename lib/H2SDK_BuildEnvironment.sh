@@ -93,14 +93,16 @@ function git_configure()
 
 function install_toolchain()
 {
-    mkdir -p $TOP_ROOT/OrangePiH2/.tmp_toolchain
-    cd $TOP_ROOT/OrangePiH2/.tmp_toolchain
-    curl -C - -o ./toolchain $toolchain
-    unzip $TOP_ROOT/OrangePiH2/.tmp_toolchain/toolchain
-    mkdir -p $TOP_ROOT/OrangePiH2/toolchain
-    mv $TOP_ROOT/OrangePiH2/.tmp_toolchain/OrangePiH2_toolchain-master $TOP_ROOT/OrangePiH2/toolchain/toolchain_tar
-    rm -rf $TOP_ROOT/OrangePiH2/.tmp_toolchain
-    cd -
+    if [ ! -d $TOP_ROOT/OrangePiH2/toolchain/arm-linux-gnueabi ]; then
+        mkdir -p $TOP_ROOT/OrangePiH2/.tmp_toolchain
+        cd $TOP_ROOT/OrangePiH2/.tmp_toolchain
+        curl -C - -o ./toolchain $toolchain
+        unzip $TOP_ROOT/OrangePiH2/.tmp_toolchain/toolchain
+        mkdir -p $TOP_ROOT/OrangePiH2/toolchain
+        mv $TOP_ROOT/OrangePiH2/.tmp_toolchain/OrangePiH3_toolchain-master/* $TOP_ROOT/OrangePiH2/toolchain/
+        rm -rf $TOP_ROOT/OrangePiH2/.tmp_toolchain
+        cd -
+    fi
 }
 
 git_configure
@@ -109,4 +111,7 @@ dirent_check
 install_toolchain
 end_op
 
-cd $TOP_ROOT
+whiptail --title "OrangePi Build System" --msgbox \
+ "`figlet OrangePi` Succeed to Create OrangePi Build System!        Path:$TOP_ROOT/OrangePiH2" \
+             15 50 0
+clear
