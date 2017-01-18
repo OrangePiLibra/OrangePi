@@ -95,10 +95,8 @@ function install_toolchain()
         curl -C - -o ./toolchain $toolchain
         unzip $TOP_ROOT/OrangePiH3/.tmp_toolchain/toolchain
         mkdir -p $TOP_ROOT/OrangePiH3/toolchain
-        mv $TOP_ROOT/OrangePiH3/.tmp_toolchain/OrangePiH3_toolchain-master $TOP_ROOT/OrangePiH3/toolchain/toolchain_tar
-        mv $TOP_ROOT/OrangePiH3/toolchain/toolchain_tar/OrangePiH3_toolchain-master/* $TOP_ROOT/OrangePiH3/toolchain/
+        mv $TOP_ROOT/OrangePiH3/.tmp_toolchain/OrangePiH3_toolchain-master/* $TOP_ROOT/OrangePiH3/toolchain/
         rm -rf $TOP_ROOT/OrangePiH3/.tmp_toolchain
-        rm -rf $TOP_ROOT/OrangePiH3/toolchain/toolchain_tar
         cd -
     fi
 }
@@ -110,6 +108,6 @@ install_toolchain
 end_op
 
 whiptail --title "OrangePi Build System" --msgbox \
- "`figlet OrangePi` Succeed to Create OrangePi Build System!        Path:$TOP_ROOT/OrangePiH53" \
+ "`figlet OrangePi` Succeed to Create OrangePi Build System!        Path:$TOP_ROOT/OrangePiH3" \
              15 50 0
 clear
