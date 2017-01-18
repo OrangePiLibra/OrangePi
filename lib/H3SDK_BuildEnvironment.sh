@@ -96,6 +96,7 @@ function install_toolchain()
         unzip $TOP_ROOT/OrangePiH3/.tmp_toolchain/toolchain
         mkdir -p $TOP_ROOT/OrangePiH3/toolchain
         mv $TOP_ROOT/OrangePiH3/.tmp_toolchain/OrangePiH3_toolchain-master/* $TOP_ROOT/OrangePiH3/toolchain/
+        sudo chmod 755 $TOP_ROOT/OrangePiH3/toolchain -R
         rm -rf $TOP_ROOT/OrangePiH3/.tmp_toolchain
         cd -
     fi

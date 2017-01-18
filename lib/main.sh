@@ -30,9 +30,10 @@ whiptail --title "OrangePi Build System" --msgbox \
 MENUSTR="Plase select build option"
 
 OPTION=$(whiptail --title "OrangePi Build System" \
-    --menu "$MENUSTR" 10 50 2 --cancel-button Finish --ok-button Select \
+    --menu "$MENUSTR" 10 50 3 --cancel-button Finish --ok-button Select \
     "0"   "Build system with kernel/uboot/rootfs" \
-    "1"   "Download full distro Image" \
+    "1"   "Update source code" \
+    "2"   "Download full distro Image" \
     3>&1 1>&2 2>&3)
 
 DISTRO=$(whiptail --title "OrangePi Build System" \
@@ -51,7 +52,7 @@ DISTRO=$(whiptail --title "OrangePi Build System" \
     "11"  "orangepi Win" \
     3>&1 1>&2 2>&3)
 
-if [ $OPTION = "0" ]; then
+if [ $OPTION = "0" -o $OPTION = "1" ]; then
     # OrangePi H5
     if [ $DISTRO = "0" ]; then
         ./H5SDK_BuildEnvironment.sh
@@ -65,7 +66,7 @@ if [ $OPTION = "0" ]; then
     else
         ./H3SDK_BuildEnvironment.sh
     fi
-elif [ $OPTION = "1" ]; then
+elif [ $OPTION = "2" ]; then
     echo "Download Image"
 else
     echo "Bad Operation"
