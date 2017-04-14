@@ -8,11 +8,10 @@ set -e
 # Support List
 # Board Name         ||  Platform
 # OrangePi PC2           Allwinner H5
-# OrangePi Prima         Allwinner H5
+# OrangePi Prime         Allwinner H5
 # OrangePi Win           Allwinner A64
-# OrangePi 3             Allwinner A64
+# OrangePi Win Plus      Allwinner A64
 # OrangePi Zeroplus2     Allwinner H5/H3
-# OrangePi Zeroplus      RDA 8810
 # OrangePi Zero          Allwinner H2+
 # OrangePi Plus2         Allwinner H3
 # OrangePi Plus2E        Allwinner H3
@@ -37,27 +36,30 @@ OPTION=$(whiptail --title "OrangePi Build System" \
     3>&1 1>&2 2>&3)
 
 DISTRO=$(whiptail --title "OrangePi Build System" \
-    --menu "$MENUSTR" 20 60 12 --cancel-button Finish --ok-button Select \
+    --menu "$MENUSTR" 25 60 15 --cancel-button Finish --ok-button Select \
     "0"   "orangepi PC2" \
     "1"   "orangepi Zero" \
     "2"   "orangepi PC Plus" \
     "3"   "orangepi Plus2e" \
     "4"   "orangepi Lite" \
-    "5"   "orangepi Plus2" \
-    "6"   "orangepi Plus" \
-    "7"   "orangepi PC" \
-    "8"   "orangepi One" \
-    "9"   "orangepi 2" \
-    "10"  "orangepi Mini2" \
-    "11"  "orangepi Win" \
+    "5"   "orangepi Plus2(H5)" \
+    "6"   "orangepi Plus2(H3)" \
+    "7"   "orangepi Plus" \
+    "8"   "orangepi PC" \
+    "9"   "orangepi One" \
+    "10"   "orangepi 2" \
+    "11"  "orangepi Mini2" \
+    "12"  "orangepi Win" \
+    "13"  "orangepi Win plus" \
+    "14"  "orangepi Prime" \
     3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" -o $OPTION = "1" ]; then
     # OrangePi H5
-    if [ $DISTRO = "0" ]; then
+    if [ $DISTRO = "0" -o $DISTRO = "5" -o $DISTRO = "14" ]; then
         ./H5SDK_BuildEnvironment.sh
     # OrangePi A64
-    elif [ $DISTRO = "11" ]; then
+    elif [ $DISTRO = "12" -o $DISTRO = "13" ]; then
         ./A64SDK_BuildEnvironment.sh
     # OrangePi H2
     elif [ $DISTRO = "1" ]; then
