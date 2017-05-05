@@ -21,6 +21,8 @@ set -e
 # OrangePi Lite          Allwinner H3
 # OrangePi PC Plus       Allwinner H3
 # OrangePi Mini2         Allwinner H3
+# OrangePi 2G-IOT        RDA8810
+# OrangePi i96           RDA8810
 
 whiptail --title "OrangePi Build System" --msgbox \
  "`figlet OrangePi` It's funny to build owner Linux system!        Let's go to Linux World with OrangePi" \
@@ -36,7 +38,7 @@ OPTION=$(whiptail --title "OrangePi Build System" \
     3>&1 1>&2 2>&3)
 
 DISTRO=$(whiptail --title "OrangePi Build System" \
-    --menu "$MENUSTR" 25 60 15 --cancel-button Finish --ok-button Select \
+    --menu "$MENUSTR" 25 60 17 --cancel-button Finish --ok-button Select \
     "0"   "orangepi PC2" \
     "1"   "orangepi Zero" \
     "2"   "orangepi PC Plus" \
@@ -52,6 +54,8 @@ DISTRO=$(whiptail --title "OrangePi Build System" \
     "12"  "orangepi Win" \
     "13"  "orangepi Win plus" \
     "14"  "orangepi Prime" \
+    "15"  "orangepi 2G-IOT" \
+    "16"  "orangepi i96" \
     3>&1 1>&2 2>&3)
 
 if [ $OPTION = "0" -o $OPTION = "1" ]; then
@@ -61,6 +65,9 @@ if [ $OPTION = "0" -o $OPTION = "1" ]; then
     # OrangePi A64
     elif [ $DISTRO = "12" -o $DISTRO = "13" ]; then
         ./A64SDK_BuildEnvironment.sh
+    # OrangePi RDA
+    elif [ $DISTRO = "15" -o $DISTRO = "16" ]; then
+        ./RDASDK_BuildEnvironment.sh
     # OrangePi H2
     elif [ $DISTRO = "1" ]; then
         ./H2SDK_BuildEnvironment.sh
