@@ -7,20 +7,39 @@ Funny with your idear and build your owner Linux system.
 
 #### OrangePi Build System support list:
 
-* OrangePi PC2
-* OrangePi Prima
-* OrangePi Win
-* OrangePi Win plus
-* OrangePi Zero
-* OrangePi Zero plus
-* OrangePi Zero plus 2
-* OrangePi PC plus
-* OrangePi Plus 2E
-* OrangePi Lite
-* OrangePi One
-* OrangePi Mini2
-* OrangePi 2
-* OrangePi Plus 2
+  * OrangePi PC2
+ 
+  * OrangePi Prima
+ 
+  * OrangePi Win
+
+  * OrangePi Win plus
+
+  * OrangePi Zero
+
+  * OrangePi Zero plus
+
+  * OrangePi Zero plus 2
+
+  * OrangePi PC plus
+
+  * OrangePi Plus 2E
+
+  * OrangePi Lite
+
+  * OrangePi One
+
+  * OrangePi Mini2
+
+  * OrangePi 2
+
+  * OrangePi Plus 2
+
+  * OrangePi 2G-IOT
+
+  * OrangePi i96
+
+-----------------------------------------------------------------
 
 #### Using OrangePi Build System
 
@@ -31,14 +50,17 @@ Funny with your idear and build your owner Linux system.
 
       You need clone this repertory, and run build scripts to download
       source code for your OrangePi Board. such as:
+      
       ```
-git clone https://github.com/OrangePiLibra/OrangePi.git
+        git clone https://github.com/OrangePiLibra/OrangePi.git
       ```
+      
       This scripts is a simple entry that build different OrangePi distro,
       After finishing to download this repertory, you need change dirent into
       "OrangePi", and run build scripts:
+      
       ```
-./Build_OrangePi.sh
+        ./Build_OrangePi.sh
       ```
 
      Choose correct OrangePi version that you want, and scripts will download
@@ -60,14 +82,34 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
      Then, you only need run a scripts and you can build your owner system easily.
      Note, please don't run this scripts as root. Last, you need run scripts,
      such as:
+     
      ```
-./build.sh
+       ./build.sh
      ```
+
+------------------------------------------------------------------
 
 ### Maintain OrangePi
 
   We offer different repertory to maintain OrangePi, you can also push your patch
   into OrangePi build system, more detail:
+
+  * OrangePi 2G-IOT/i96
+
+    OrangePi 2G-IOT/i96 build on Allwinner RDA8810 Soc, the offfical maintain
+    repertory as follow:
+
+    kernel:
+    
+    ```
+      https://github.com/OrangePiLibra/OrangePiRDA_kernel.git
+    ```
+    
+    scripts:
+    
+    ```
+      https://github.com/OrangePiLibra/OrangePiRDA_scripts.git
+    ```
 
   * OrangePi PC2/Prima/Zero plus2
 
@@ -75,24 +117,32 @@ git clone https://github.com/OrangePiLibra/OrangePi.git
     repertory as follow:
 
     kernel:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH5_kernel.git
+      https://github.com/OrangePiLibra/OrangePiH5_kernel.git
     ```
+    
     u-boot:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH5_uboot.git
+      https://github.com/OrangePiLibra/OrangePiH5_uboot.git
     ```
+    
     build scripts
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH5_scripts.git
+      https://github.com/OrangePiLibra/OrangePiH5_scripts.git
     ```
+    
     external binary file
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH5_external.git
+      https://github.com/OrangePiLibra/OrangePiH5_external.git
     ```
+    
     toolchain
     ```
-https://github.com/OrangePiLibra/OrangePiH5_toolchain.git
+      https://github.com/OrangePiLibra/OrangePiH5_toolchain.git
     ```
 
   * OrangePi Win/Win plus
@@ -101,24 +151,31 @@ https://github.com/OrangePiLibra/OrangePiH5_toolchain.git
     repertory as follow:
 
     kernel:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiA64_kernel.git
+      https://github.com/OrangePiLibra/OrangePiA64_kernel.git
     ```
+    
     u-boot:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiA64_uboot.git
+      https://github.com/OrangePiLibra/OrangePiA64_uboot.git
     ```
+    
     build scripts
+    
     ```
-https://github.com/OrangePiLibra/OrangePiA64_scripts.git
+      https://github.com/OrangePiLibra/OrangePiA64_scripts.git
     ```
+    
     external binary file
     ```
-https://github.com/OrangePiLibra/OrangePiA64_external.git
+      https://github.com/OrangePiLibra/OrangePiA64_external.git
     ```
+    
     toolchain
     ```
-https://github.com/OrangePiLibra/OrangePiA64_toolchain.git
+      https://github.com/OrangePiLibra/OrangePiA64_toolchain.git
     ```
 
 
@@ -128,24 +185,32 @@ https://github.com/OrangePiLibra/OrangePiA64_toolchain.git
     repertory as follow:
 
     kernel:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH2_kernel.git
+      https://github.com/OrangePiLibra/OrangePiH2_kernel.git
     ```
+    
     u-boot:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_uboot.git
+      https://github.com/OrangePiLibra/OrangePiH3_uboot.git
     ```
+    
     build scripts
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH2_scripts.git
+      https://github.com/OrangePiLibra/OrangePiH2_scripts.git
     ```
+    
     external binary file
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH2_external.git
+      https://github.com/OrangePiLibra/OrangePiH2_external.git
     ```
+    
     toolchain
     ```
-https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
+      https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
     ```
 
   * OrangePi Plus2/Plus 2E/One/PC/2/Lite/PC Plus/Mini2
@@ -154,22 +219,31 @@ https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
     the offfical maintain repertory as follow:
 
     kernel:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_kernel.git
+      https://github.com/OrangePiLibra/OrangePiH3_kernel.git
     ```
+    
     u-boot:
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_uboot.git
+      https://github.com/OrangePiLibra/OrangePiH3_uboot.git
     ```
+    
     build scripts
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_scripts.git
+      https://github.com/OrangePiLibra/OrangePiH3_scripts.git
     ```
+    
     external binary file
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_external.git
+      https://github.com/OrangePiLibra/OrangePiH3_external.git
     ```
+    
     toolchain
+    
     ```
-https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
+      https://github.com/OrangePiLibra/OrangePiH3_toolchain.git
     ```
