@@ -10,14 +10,16 @@ fi
 
 # Github
 kernel_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_kernel.git"
-#uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiH3_uboot.git"
+uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_uboot.git"
 scripts_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_scripts.git"
-#external_GITHUB="https://github.com/OrangePiLibra/OrangePiH3_external.git"
+external_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_external.git"
 toolchain="https://codeload.github.com/OrangePiLibra/OrangePiH3_toolchain/zip/master"
 
 # Prepare dirent
 Prepare_dirent=(
 kernel
+uboot
+external
 scripts
 )
 

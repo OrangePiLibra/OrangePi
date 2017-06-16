@@ -60,8 +60,9 @@ Funny with your idear and build your owner Linux system.
       "OrangePi", and run build scripts:
       
       ```
-        ./Build_OrangePi.sh
+         ./Build_OrangePi.sh
       ```
+
 
      Choose correct OrangePi version that you want, and scripts will download
      source code that contain kernel, uboot and build scripts.
@@ -76,6 +77,7 @@ Funny with your idear and build your owner Linux system.
      If you use "OrangePi Zero", please change your dirent into "OrangePiH2"
 
      If you use another board, please change your dirent into "OrangePiH3"
+
 
    2. Build owner distro OrangePi system
 
