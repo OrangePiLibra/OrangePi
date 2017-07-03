@@ -9,10 +9,10 @@ if [ -z $TOP_ROOT ]; then
 fi
 
 # Github
-kernel_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_kernel.git"
-uboot_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_uboot.git"
-scripts_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_scripts.git"
-external_GITHUB="https://github.com/OrangePiLibra/OrangePiRDA_external.git"
+kernel_GITHUB="https://github.com/OrangePiLibra/OrangePi_i96_kernel.git"
+uboot_GITHUB="https://github.com/OrangePiLibra/OrangePi_i96_uboot.git"
+scripts_GITHUB="https://github.com/OrangePiLibra/OrangePi_i96_scripts.git"
+external_GITHUB="https://github.com/OrangePiLibra/OrangePi_i96_external.git"
 toolchain="https://codeload.github.com/OrangePiLibra/OrangePiH3_toolchain/zip/master"
 
 # Prepare dirent
